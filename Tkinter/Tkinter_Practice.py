@@ -8,21 +8,21 @@ class ParentWindow(Frame):
 
         self.master = master
         self.master.resizable(width = True, height = True)
-        self.master.geometry('{} x {}'.format(700,400))
+        self.master.geometry('{}x{}'.format(700,400))
         self.master.title('Learning Tkinter')
-        self.master.config(bg='black')
+        self.master.config(bg='lightgray')
 
         self.varFName = StringVar()
         self.varLName = StringVar()
 
-        self.lblFName = Entry(self.master, text='First Name: ', font =("Helvetica", 16), fg='black', bg='lightblue')
+        self.lblFName = Label(self.master, text='First Name: ', font =("Helvetica", 16), fg='black', bg='lightgray')
         self.lblFName.grid(row = 0, column =0, padx = (30, 0), pady = (30, 0))
 
-        self.lblLName = Entry(self.master, text='Last Name: ', font =("Helvetica", 16), fg='black', bg='lightblue')
+        self.lblLName = Label(self.master, text='Last Name: ', font =("Helvetica", 16), fg='black', bg='lightgray')
         self.lblLName.grid(row = 1, column = 0, padx = (30, 0), pady = (30, 0))
 
-        self.lblLDisplay = Entry(self.master, text='', font =("Helvetica", 16), fg='black', bg='lightblue')
-        self.lblLDisplay.grid(row = 3, column = 1, padx = (30, 0), pady = (30, 0))
+        self.lblDisplay = Label(self.master, text='', font =("Helvetica", 16), fg='black', bg='lightblue')
+        self.lblDisplay.grid(row = 3, column = 1, padx = (30, 0), pady = (30, 0))
 
         self.txtFName = Entry(self.master, text=self.varFName, font =("Helvetica", 16), fg='black', bg='lightblue')
         self.txtFName.grid(row = 0, column = 1, padx = (30, 0), pady = (30, 0))

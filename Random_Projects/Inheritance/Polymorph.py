@@ -3,7 +3,7 @@ class Witch:
     height = "4.9\'"
     aesthetic = "Large nose with mole"
 
-    def Alchemy():
+    def Alchemy(self):
         text = "\nCooking done poorly."
         return text
 
@@ -14,7 +14,7 @@ class Daughter_of_witch(Witch):
     height = "4.8\'"
     aesthetic = "Slightly smaller nose with the same mole"
 
-    def Alchemy():
+    def Alchemy(self):
         text = "\nScience class."
         return text
 
@@ -25,6 +25,6 @@ class Mother_of_witch(Witch):
     height = "4.2\'"
     aesthetic = "Cartoonishly large nose with no mole"
 
-    def Alchemy():
+    def Alchemy(self):
         text = "\nNo one values the old traditions nowadays."
         return text
