@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+from tkinter import messagebox
 
 #Be sure to import our other modules
 #so we can have access to them
@@ -9,8 +10,8 @@ import phonebook_func
 
 #Frame is the Tkinter frame class that our own class will inherit from
 class ParentWindow(Frame):
-    def __init__(self, master, **args, **kwargs):
-        Frame.__init__(self, master, **args, **kwargs)
+    def __init__(self, master, *args, **kwargs):
+        Frame.__init__(self, master, *args, **kwargs)
 
         #Define our master frame configuration
         self.master = master
@@ -29,6 +30,6 @@ class ParentWindow(Frame):
         phonebook_gui.load_gui(self)
 
 if __name__ == "__main__":
-    root = tk.TK()
+    root = tk.Tk()
     App = ParentWindow(root)
     root.mainloop()
