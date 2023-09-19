@@ -76,7 +76,7 @@ class ParentWindow(Frame):
             #moves each file from the source to the destination
             modification_time = datetime.datetime.fromtimestamp(os.path.getmtime(os.path.join(source, i)))
             deadline = datetime.datetime.today() - datetime.timedelta(days = 1)
-            if modification_time < deadline:
+            if modification_time > deadline:
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transfered')
 
