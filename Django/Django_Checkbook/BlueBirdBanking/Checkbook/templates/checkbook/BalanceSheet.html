@@ -18,6 +18,13 @@
 			<h2>RECENT TRANSACTIONS</h2>
 
 			<table class="table table-responsive" id ="transactions-table">
+				<tr id="headerRow">
+					<th>Date</th>
+					<th>Type</th>
+					<th>Description</th>
+					<th>Amount</th>
+					<th>Balance</th>
+				</tr>
 				{% for key, total in table_contents.items %}
 				<tr>
 					<td class="center">{{ key.date }}</td>
